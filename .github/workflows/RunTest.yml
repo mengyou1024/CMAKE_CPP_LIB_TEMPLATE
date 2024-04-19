@@ -1,0 +1,25 @@
+name: 运行测试
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  test:
+    runs-on: windows-latest
+    steps:
+    # 拉取仓库
+    - uses: actions/checkout@v4
+    # 配置MSVC环境
+    - uses: ilammy/msvc-dev-cmd@v1
+      with:
+        arch: x64
+    # 编译运行测试
+    - name: Build and Test
+      run: |
+        cmake --preset x64-debug-msvc  -DBUILD_TEST=ON
+        cmake --build build/x64-debug-msvc
+        ./build/x64-debug-msvc/test/unit_tests.exe
+        
