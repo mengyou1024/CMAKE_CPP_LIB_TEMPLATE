@@ -32,134 +32,108 @@ CheckOptions:
   readability-identifier-naming.CheckAnonFieldInParent: 'false'
   readability-identifier-naming.ClassCase: CamelCase
   readability-identifier-naming.ClassConstantCase: UPPER_CASE
-  readability-identifier-naming.ClassConstantHungarianPrefix: Off
   readability-identifier-naming.ClassConstantIgnoredRegexp: ''
   readability-identifier-naming.ClassConstantPrefix: ''
   readability-identifier-naming.ClassConstantSuffix: ''
-  readability-identifier-naming.ClassHungarianPrefix: Off
   readability-identifier-naming.ClassIgnoredRegexp: ''
   readability-identifier-naming.ClassMemberCase: camelBack
-  readability-identifier-naming.ClassMemberHungarianPrefix: Off
   readability-identifier-naming.ClassMemberIgnoredRegexp: ''
   readability-identifier-naming.ClassMemberPrefix: 's_'
   readability-identifier-naming.ClassMemberSuffix: ''
   readability-identifier-naming.ClassPrefix: ''
   readability-identifier-naming.ClassSuffix: ''
   readability-identifier-naming.ConstexprFunctionCase: CamelCase
-  readability-identifier-naming.ConstexprFunctionHungarianPrefix: Off
   readability-identifier-naming.ConstexprFunctionIgnoredRegexp: ''
   readability-identifier-naming.ConstexprFunctionPrefix: ''
   readability-identifier-naming.ConstexprFunctionSuffix: ''
   readability-identifier-naming.ConstexprVariableCase: UPPER_CASE
-  readability-identifier-naming.ConstexprVariableHungarianPrefix: Off
   readability-identifier-naming.ConstexprVariableIgnoredRegexp: ''
   readability-identifier-naming.ConstexprVariablePrefix: ''
   readability-identifier-naming.ConstexprVariableSuffix: ''
   readability-identifier-naming.EnumCase: CamelCase
   readability-identifier-naming.EnumConstantCase: UPPER_CASE
-  readability-identifier-naming.EnumConstantHungarianPrefix: Off
   readability-identifier-naming.EnumConstantIgnoredRegexp: ''
   readability-identifier-naming.EnumConstantPrefix: ''
   readability-identifier-naming.EnumConstantSuffix: ''
-  readability-identifier-naming.EnumHungarianPrefix: Off
   readability-identifier-naming.EnumIgnoredRegexp: ''
   readability-identifier-naming.EnumPrefix: ''
   readability-identifier-naming.EnumSuffix: ''
   readability-identifier-naming.FunctionCase: CamelCase
-  readability-identifier-naming.FunctionHungarianPrefix: Off
   readability-identifier-naming.FunctionIgnoredRegexp: ''
   readability-identifier-naming.FunctionPrefix: ''
   readability-identifier-naming.FunctionSuffix: ''
   readability-identifier-naming.GetConfigPerFile: 'true'
   readability-identifier-naming.GlobalConstantCase: UPPER_CASE
-  readability-identifier-naming.GlobalConstantHungarianPrefix: Off
   readability-identifier-naming.GlobalConstantIgnoredRegexp: ''
   readability-identifier-naming.GlobalConstantPointerCase: UPPER_CASE
-  readability-identifier-naming.GlobalConstantPointerHungarianPrefix: Off
   readability-identifier-naming.GlobalConstantPointerIgnoredRegexp: ''
   readability-identifier-naming.GlobalConstantPointerPrefix: ''
   readability-identifier-naming.GlobalConstantPointerSuffix: ''
   readability-identifier-naming.GlobalConstantPrefix: ''
   readability-identifier-naming.GlobalConstantSuffix: ''
   readability-identifier-naming.GlobalVariableCase: CamelCase
-  readability-identifier-naming.GlobalVariableHungarianPrefix: Off
   readability-identifier-naming.GlobalVariableIgnoredRegexp: ''
   readability-identifier-naming.GlobalVariablePrefix: g
   readability-identifier-naming.GlobalVariableSuffix: ''
   readability-identifier-naming.IgnoreFailedSplit: 'false'
   readability-identifier-naming.IgnoreMainLikeFunctions: 'false'
   readability-identifier-naming.LocalConstantCase: UPPER_CASE
-  readability-identifier-naming.LocalConstantHungarianPrefix: Off
   readability-identifier-naming.LocalConstantIgnoredRegexp: ''
   readability-identifier-naming.LocalConstantPrefix: '_'
   readability-identifier-naming.LocalConstantSuffix: ''
   readability-identifier-naming.MacroDefinitionCase: UPPER_CASE
-  readability-identifier-naming.MacroDefinitionHungarianPrefix: Off
   readability-identifier-naming.MacroDefinitionIgnoredRegexp: ''
   readability-identifier-naming.MacroDefinitionPrefix: ''
   readability-identifier-naming.MacroDefinitionSuffix: ''
   readability-identifier-naming.MemberCase: lower_case
-  readability-identifier-naming.MemberHungarianPrefix: Off
   readability-identifier-naming.MemberIgnoredRegexp: ''
   readability-identifier-naming.MemberPrefix: ''
   readability-identifier-naming.MemberSuffix: ''
   readability-identifier-naming.NamespaceCase: CamelCase
-  readability-identifier-naming.NamespaceHungarianPrefix: Off
   readability-identifier-naming.NamespaceIgnoredRegexp: ''
   readability-identifier-naming.NamespacePrefix: ''
   readability-identifier-naming.NamespaceSuffix: ''
   readability-identifier-naming.ParameterCase: lower_case
-  readability-identifier-naming.ParameterHungarianPrefix: Off
   readability-identifier-naming.ParameterIgnoredRegexp: ''
   readability-identifier-naming.ParameterPrefix: ''
   readability-identifier-naming.ParameterSuffix: ''
   readability-identifier-naming.PrivateMemberCase: lower_case
-  readability-identifier-naming.PrivateMemberHungarianPrefix: Off
   readability-identifier-naming.PrivateMemberIgnoredRegexp: ''
   readability-identifier-naming.PrivateMemberPrefix: m_
   readability-identifier-naming.PrivateMemberSuffix: ''
   readability-identifier-naming.ProtectedMemberCase: lower_case
-  readability-identifier-naming.ProtectedMemberHungarianPrefix: Off
   readability-identifier-naming.ProtectedMemberIgnoredRegexp: ''
   readability-identifier-naming.ProtectedMemberPrefix: p_
   readability-identifier-naming.ProtectedMemberSuffix: ''
   readability-identifier-naming.ScopedEnumConstantCase: CamelCase
-  readability-identifier-naming.ScopedEnumConstantHungarianPrefix: Off
   readability-identifier-naming.ScopedEnumConstantIgnoredRegexp: ''
   readability-identifier-naming.ScopedEnumConstantPrefix: ''
   readability-identifier-naming.ScopedEnumConstantSuffix: ''
   readability-identifier-naming.StaticConstantCase: UPPER_CASE
-  readability-identifier-naming.StaticConstantHungarianPrefix: Off
   readability-identifier-naming.StaticConstantIgnoredRegexp: ''
   readability-identifier-naming.StaticConstantPrefix: ''
   readability-identifier-naming.StaticConstantSuffix: ''
   readability-identifier-naming.TemplateParameterCase: CamelCase
-  readability-identifier-naming.TemplateParameterHungarianPrefix: Off
   readability-identifier-naming.TemplateParameterIgnoredRegexp: ''
   readability-identifier-naming.TemplateParameterPrefix: _
   readability-identifier-naming.TemplateParameterSuffix: ''
   readability-identifier-naming.TypeAliasCase: CamelCase
-  readability-identifier-naming.TypeAliasHungarianPrefix: Off
   readability-identifier-naming.TypeAliasIgnoredRegexp: ''
   readability-identifier-naming.TypeAliasPrefix: ''
   readability-identifier-naming.TypeAliasSuffix: ''
   readability-identifier-naming.TypedefCase: lower_case
-  readability-identifier-naming.TypedefHungarianPrefix: Off
   readability-identifier-naming.TypedefIgnoredRegexp: ''
   readability-identifier-naming.TypedefPrefix: ''
   readability-identifier-naming.TypedefSuffix: _t
   readability-identifier-naming.UnionCase: CamelCase
-  readability-identifier-naming.UnionHungarianPrefix: Off
   readability-identifier-naming.UnionIgnoredRegexp: ''
   readability-identifier-naming.UnionPrefix: ''
   readability-identifier-naming.UnionSuffix: ''
   readability-identifier-naming.VariableCase: lower_case
-  readability-identifier-naming.VariableHungarianPrefix: Off
   readability-identifier-naming.VariableIgnoredRegexp: ''
   readability-identifier-naming.VariablePrefix: _
   readability-identifier-naming.VariableSuffix: ''
   readability-identifier-naming.VirtualMethodCase: camelBack
-  readability-identifier-naming.VirtualMethodHungarianPrefix: Off
   readability-identifier-naming.VirtualMethodIgnoredRegexp: ''
   readability-identifier-naming.VirtualMethodPrefix: ''
   readability-identifier-naming.VirtualMethodSuffix: ''
