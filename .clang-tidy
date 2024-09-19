@@ -36,7 +36,7 @@ CheckOptions:
   readability-identifier-naming.ClassConstantPrefix: ''
   readability-identifier-naming.ClassConstantSuffix: ''
   readability-identifier-naming.ClassIgnoredRegexp: ''
-  readability-identifier-naming.ClassMemberCase: camelBack
+  readability-identifier-naming.ClassMemberCase: lower_case
   readability-identifier-naming.ClassMemberIgnoredRegexp: ''
   readability-identifier-naming.ClassMemberPrefix: 's_'
   readability-identifier-naming.ClassMemberSuffix: ''
@@ -131,10 +131,10 @@ CheckOptions:
   readability-identifier-naming.UnionSuffix: ''
   readability-identifier-naming.VariableCase: lower_case
   readability-identifier-naming.VariableIgnoredRegexp: ''
-  readability-identifier-naming.VariablePrefix: _
+  readability-identifier-naming.VariablePrefix: ''
   readability-identifier-naming.VariableSuffix: ''
   readability-identifier-naming.VirtualMethodCase: camelBack
   readability-identifier-naming.VirtualMethodIgnoredRegexp: ''
   readability-identifier-naming.VirtualMethodPrefix: ''
   readability-identifier-naming.VirtualMethodSuffix: ''
-SystemHeaders:   false
+SystemHeaders: false
