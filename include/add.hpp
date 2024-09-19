@@ -1,4 +1,4 @@
 #pragma once
 
 
-int add(int a, int b);
+int Add(int a, int b);

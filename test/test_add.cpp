@@ -2,5 +2,5 @@
 #include <add.hpp>
 
 TEST(ADD, add) {
-    EXPECT_TRUE(add(1, 2) == 3);
+    EXPECT_TRUE(Add(1, 2) == 3);
 }

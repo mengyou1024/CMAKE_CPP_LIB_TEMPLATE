@@ -1,0 +1,98 @@
+# Run clang tidy general analysis, excluding variable naming checks.
+---
+Checks: >
+  -*,
+  readability-identifier-naming
+WarningsAsErrors: ""
+HeaderFilterRegex: "*"
+FormatStyle: file
+CheckOptions:
+  # ---------------------------------------------------------------------------
+  # Type declarations - class, struct, enum, union
+  - key: readability-identifier-naming.ClassCase
+    value: CamelCase
+  - key: readability-identifier-naming.EnumCase
+    value: CamelCase
+  - key: readability-identifier-naming.UnionCase
+    value: CamelCase
+
+  # ---------------------------------------------------------------------------
+  # Type aliasing - using MyType = int
+  - key: readability-identifier-naming.TypeAliasCase
+    value: CamelCase
+  # Typedef names
+  - key: readability-identifier-naming.TypedefCase
+    value: lower_case
+  - key: readability-identifier-naming.TypedefSuffix
+    value: _t
+
+  # ---------------------------------------------------------------------------
+  # Enum value/constant declarations
+  # Legacy enum delcarations
+  - key: readability-identifier-naming.EnumConstantCase
+    value: UPPER_CASE
+  - key: readability-identifier-naming.ScopedEnumConstantCase
+    value: CamelCase
+
+  # ---------------------------------------------------------------------------
+  # Function declarations. This covers class methods as well.
+  - key: readability-identifier-naming.FunctionCase
+    value: CamelCase
+
+  # ---------------------------------------------------------------------------
+  # Class/struct/union member variables
+  - key: readability-identifier-naming.ClassConstantCase
+    value: CamelCase
+  - key: readability-identifier-naming.ClassMemberCase
+    value: lower_case
+  - key: readability-identifier-naming.ProtectedMemberCase
+    value: lower_case
+  - key: readability-identifier-naming.ProtectedMemberPrefix
+    value: p_
+  - key: readability-identifier-naming.PrivateMemberCase
+    value: lower_case
+  - key: readability-identifier-naming.PrivateMemberPrefix
+    value: m_
+  - key: readability-identifier-naming.MemberCase
+    value: CamelCase
+
+  # ---------------------------------------------------------------------------
+  # Parameters
+  - key: readability-identifier-naming.ParameterCase
+    value: lower_case
+
+  # ---------------------------------------------------------------------------
+  # Variables
+  - key: readability-identifier-naming.ConstexprVariableCase
+    value: UPPER_CASE
+  - key: readability-identifier-naming.LocalConstantCase
+    value: UPPER_CASE
+  - key: readability-identifier-naming.VariableCase
+    value: lower_case
+  - key: readability-identifier-naming.VariablePrefix
+    value: _
+  - key: readability-identifier-naming.GlobalVariableCase
+    value: CamelCase
+  - key: readability-identifier-naming.GlobalVariablePrefix
+    value: g
+  - key: readability-identifier-naming.GlobalConstantCase
+    value: UPPER_CASE
+  - key: readability-identifier-naming.GlobalConstantPointerCase
+    value: UPPER_CASE
+
+  # ---------------------------------------------------------------------------
+  # Macros
+  - key: readability-identifier-naming.MacroDefinitionCase
+    value: UPPER_CASE
+
+  # ---------------------------------------------------------------------------
+  # Templates
+  - key: readability-identifier-naming.TemplateParameterCase
+    value: CamelCase
+  - key: readability-identifier-naming.TemplateParameterPrefix
+    value: _
+
+  # ---------------------------------------------------------------------------
+  # Namespaces
+  - key: readability-identifier-naming.NamespaceCase
+    value: CamelCase

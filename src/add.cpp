@@ -1,6 +1,6 @@
 
 #include "add.hpp"
 
-int add(int a, int b) {
+int Add(int a, int b) {
     return a + b;
 }
