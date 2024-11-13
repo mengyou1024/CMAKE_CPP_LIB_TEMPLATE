@@ -10,7 +10,9 @@
             "cacheVariables": {
                 "CMAKE_C_COMPILER": "cl.exe",
                 "CMAKE_CXX_COMPILER": "cl.exe",
-                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+                "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
+                "VCPKG_TARGET_TRIPLET": "x64-windows"
             },
             "condition": {
                 "type": "equals",
@@ -26,7 +28,10 @@
             "installDir": "${sourceDir}/build/${presetName}",
             "cacheVariables": {
                 "CMAKE_C_COMPILER": "gcc.exe",
-                "CMAKE_CXX_COMPILER": "g++.exe"
+                "CMAKE_CXX_COMPILER": "g++.exe",
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+                "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
+                "VCPKG_TARGET_TRIPLET": "x64-windows"
             },
             "condition": {
                 "type": "equals",
@@ -70,6 +75,41 @@
             "name": "x64-release-mingw",
             "displayName": "MINGW x64 Release",
             "inherits": "x64-debug-mingw",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release"
+            }
+        },
+        {
+            "name": "linux-gcc-base",
+            "hidden": true,
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "installDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "gcc",
+                "CMAKE_CXX_COMPILER": "g++",
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+                "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
+                "VCPKG_TARGET_TRIPLET": "x64-linux"
+            },
+            "condition": {
+                "type": "equals",
+                "lhs": "${hostSystemName}",
+                "rhs": "Linux"
+            }
+        },
+        {
+            "name": "x64-debug-gcc",
+            "displayName": "Linux GCC x64 Debug",
+            "inherits": "linux-gcc-base",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+        },
+        {
+            "name": "x64-release-gcc",
+            "displayName": "Linux GCC x64 Release",
+            "inherits": "x64-debug-gcc",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Release"
             }
