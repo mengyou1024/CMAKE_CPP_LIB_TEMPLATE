@@ -6,11 +6,11 @@ include(cmake/Utils.cmake)
 
 set(CMAKE_CXX_STANDARD 20)
 
-resolve_source_tree("src" SRC_FILE INC_FILES INC_DIRS)
+resolve_source_tree("src" SRC_FILES INC_FILES INC_DIRS)
 
 add_library(
     ${PROJECT_NAME}
-    ${SRC_FILE}
+    ${SRC_FILES}
     ${INC_FILES}
 )
 target_include_directories(${PROJECT_NAME} PUBLIC include)
