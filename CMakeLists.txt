@@ -22,7 +22,8 @@ target_compile_options(
     "$<$<CXX_COMPILER_ID:MSVC>:/W4>"
 )
 
-if(BUILD_TEST)
+if(BUILD_TESTING)
+    include(CTest)
     add_subdirectory(test)
 endif()
 

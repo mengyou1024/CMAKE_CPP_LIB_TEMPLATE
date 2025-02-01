@@ -21,5 +21,6 @@ jobs:
       run: |
         cmake --preset x64-debug-msvc  -DBUILD_TEST=ON
         cmake --build build/x64-debug-msvc
-        ./build/x64-debug-msvc/test/unit_tests.exe
+        cd build/x64-debug-msvc
+        ctest -C Debug -VV
         

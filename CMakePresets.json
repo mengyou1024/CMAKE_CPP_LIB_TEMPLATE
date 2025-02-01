@@ -12,7 +12,8 @@
                 "CMAKE_CXX_COMPILER": "cl.exe",
                 "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
                 "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
-                "VCPKG_TARGET_TRIPLET": "x64-windows"
+                "VCPKG_TARGET_TRIPLET": "x64-windows",
+                "BUILD_TESTING": "ON"
             },
             "condition": {
                 "type": "equals",
@@ -31,7 +32,8 @@
                 "CMAKE_CXX_COMPILER": "g++.exe",
                 "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
                 "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
-                "VCPKG_TARGET_TRIPLET": "x64-windows"
+                "VCPKG_TARGET_TRIPLET": "x64-windows",
+                "BUILD_TESTING": "ON"
             },
             "condition": {
                 "type": "equals",
@@ -82,7 +84,7 @@
         {
             "name": "linux-gcc-base",
             "hidden": true,
-            "generator": "Ninja",
+            "generator": "Unix Makefiles",
             "binaryDir": "${sourceDir}/build/${presetName}",
             "installDir": "${sourceDir}/build/${presetName}",
             "cacheVariables": {
@@ -90,7 +92,8 @@
                 "CMAKE_CXX_COMPILER": "g++",
                 "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
                 "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
-                "VCPKG_TARGET_TRIPLET": "x64-linux"
+                "VCPKG_TARGET_TRIPLET": "x64-linux",
+                "BUILD_TESTING": "ON"
             },
             "condition": {
                 "type": "equals",
