@@ -1,3 +1,10 @@
+if(DEFINED UTILS_CMAKE_INCLUDED)
+    message(WARNING "Utils.cmake has already been included, not need include ${CMAKE_CURRENT_LIST_DIR}/Utils.cmake")
+    return()
+endif()
+message(STATUS "First Include ${CMAKE_CURRENT_LIST_DIR}/Utils.cmake")
+set(UTILS_CMAKE_INCLUDED TRUE)
+
 #[[
     添加子目录的路径, 该函数会遍历目录下所有的文件夹, 如果存在CMakeLists.txt则添加至子目录的构建目录
     `add_subdirectory_path(path)`
