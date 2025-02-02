@@ -1,8 +1,7 @@
 if(DEFINED UTILS_CMAKE_INCLUDED)
-    message(WARNING "Utils.cmake has already been included, not need include ${CMAKE_CURRENT_LIST_DIR}/Utils.cmake")
     return()
 endif()
-message(STATUS "First Include ${CMAKE_CURRENT_LIST_DIR}/Utils.cmake")
+message(STATUS "Include ${CMAKE_CURRENT_LIST_DIR}/Utils.cmake")
 set(UTILS_CMAKE_INCLUDED TRUE)
 
 #[[
