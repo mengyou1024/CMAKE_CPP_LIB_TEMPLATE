@@ -19,8 +19,8 @@ jobs:
     # 编译运行测试
     - name: Build and Test
       run: |
-        cmake --preset x64-debug-msvc
-        cmake --build build/x64-debug-msvc
-        cd build/x64-debug-msvc
+        cmake --preset msvc-x64-debug
+        cmake --build build/msvc-x64-debug
+        cd build/msvc-x64-debug
         ctest -C Debug -VV
         
