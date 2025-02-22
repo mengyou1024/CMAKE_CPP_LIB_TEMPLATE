@@ -1,0 +1,170 @@
+{
+    "version": 4,
+    "configurePresets": [
+        {
+            "name": "windows-msvc-base",
+            "hidden": true,
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "installDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "cl.exe",
+                "CMAKE_CXX_COMPILER": "cl.exe",
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+                "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
+                "BUILD_TESTING": "ON"
+            },
+            "condition": {
+                "type": "equals",
+                "lhs": "${hostSystemName}",
+                "rhs": "Windows"
+            }
+        },
+        {
+            "name": "msvc-x64-debug",
+            "displayName": "MSVC x64 Debug",
+            "inherits": "windows-msvc-base",
+            "architecture": {
+                "value": "x64",
+                "strategy": "external"
+            },
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "VCPKG_TARGET_TRIPLET": "x64-windows"
+            }
+        },
+        {
+            "name": "msvc-x64-release",
+            "displayName": "MSVC x64 Release",
+            "inherits": "msvc-x64-debug",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release"
+            }
+        },
+        {
+            "name": "msvc-x64-mt-debug",
+            "displayName": "MSVC x64 MultiThread Debug",
+            "inherits": "msvc-x64-debug",
+            "cacheVariables": {
+                "VCPKG_TARGET_TRIPLET": "x64-windows",
+                "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreadedDebug"
+            }
+        },
+        {
+            "name": "msvc-x64-mt-release",
+            "displayName": "MSVC x64 MultiThread Release",
+            "inherits": "msvc-x64-mt-debug",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreaded"
+            }
+        },
+        {
+            "name": "msvc-x86-debug",
+            "displayName": "MSVC x86 Debug",
+            "inherits": "windows-msvc-base",
+            "architecture": {
+                "value": "x86",
+                "strategy": "external"
+            },
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "VCPKG_TARGET_TRIPLET": "x86-windows"
+            }
+        },
+        {
+            "name": "msvc-x86-release",
+            "displayName": "MSVC x86 Release",
+            "inherits": "msvc-x86-debug",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release"
+            }
+        },
+        {
+            "name": "msvc-x86-mt-debug",
+            "displayName": "MSVC x86 MultiThread Debug",
+            "inherits": "msvc-x86-debug",
+            "cacheVariables": {
+                "VCPKG_TARGET_TRIPLET": "x86-windows",
+                "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreadedDebug"
+            }
+        },
+        {
+            "name": "msvc-x86-mt-release",
+            "displayName": "MSVC x86 MultiThread Release",
+            "inherits": "msvc-x86-mt-debug",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreaded"
+            }
+        },
+        {
+            "name": "msvc-x64-static-debug",
+            "displayName": "MSVC x64 Static Debug",
+            "inherits": "msvc-x64-debug",
+            "cacheVariables": {
+                "VCPKG_TARGET_TRIPLET": "x64-windows-static",
+                "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreadedDebug"
+            }
+        },
+        {
+            "name": "msvc-x64-static-release",
+            "displayName": "MSVC x64 Static Release",
+            "inherits": "msvc-x64-static-debug",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreaded"
+            }
+        },
+        {
+            "name": "msvc-x86-static-debug",
+            "displayName": "MSVC x86 Static Debug",
+            "inherits": "msvc-x86-debug",
+            "cacheVariables": {
+                "VCPKG_TARGET_TRIPLET": "x86-windows-static",
+                "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreadedDebug"
+            }
+        },
+        {
+            "name": "msvc-x86-static-release",
+            "displayName": "MSVC x86 Static Release",
+            "inherits": "msvc-x86-static-debug",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreaded"
+            }
+        },
+        {
+            "name": "msvc-x64-static-md-debug",
+            "displayName": "MSVC x64 Static MultiThreadDLL Debug",
+            "inherits": "msvc-x64-debug",
+            "cacheVariables": {
+                "VCPKG_TARGET_TRIPLET": "x64-windows-static-md"
+            }
+        },
+        {
+            "name": "msvc-x64-static-md-release",
+            "displayName": "MSVC x64 Static MultiThreadDLL Release",
+            "inherits": "msvc-x64-static-md-debug",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release"
+            }
+        },
+        {
+            "name": "msvc-x86-static-md-debug",
+            "displayName": "MSVC x86 Static MultiThreadDLL Debug",
+            "inherits": "msvc-x86-debug",
+            "cacheVariables": {
+                "VCPKG_TARGET_TRIPLET": "x86-windows-static-md"
+            }
+        },
+        {
+            "name": "msvc-x86-static-md-release",
+            "displayName": "MSVC x86 Static MultiThreadDLL Release",
+            "inherits": "msvc-x86-static-md-debug",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release"
+            }
+        }
+    ]
+}
