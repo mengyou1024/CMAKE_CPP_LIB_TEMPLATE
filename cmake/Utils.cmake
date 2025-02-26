@@ -12,7 +12,6 @@ if(CLANG_TIDY_EXECUTABLE)
     message(STATUS "Found clang-tidy: ${CLANG_TIDY_EXECUTABLE}")
 else()
     message(WARNING "clang-tidy not found, use: `choco install llvm` to install clang-tidy")
-    return()
 endif()
 
 #[[
