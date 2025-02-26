@@ -4,7 +4,7 @@ project(cpp_lib_template)
 
 include(cmake/Utils.cmake)
 
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 23)
 
 resolve_source_tree("src" SRC_FILES INC_FILES INC_DIRS)
 
