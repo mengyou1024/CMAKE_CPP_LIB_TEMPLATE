@@ -1,8 +1,19 @@
 if(DEFINED UTILS_CMAKE_INCLUDED)
     return()
 endif()
+
 message(STATUS "Include ${CMAKE_CURRENT_LIST_DIR}/Utils.cmake")
 set(UTILS_CMAKE_INCLUDED TRUE)
+
+# 查找clang-tidy可执行文件
+find_program(CLANG_TIDY_EXECUTABLE clang-tidy)
+
+if(CLANG_TIDY_EXECUTABLE)
+    message(STATUS "Found clang-tidy: ${CLANG_TIDY_EXECUTABLE}")
+else()
+    message(WARNING "clang-tidy not found, use: `choco install llvm` to install clang-tidy")
+    return()
+endif()
 
 #[[
     添加子目录的路径, 该函数会遍历目录下所有的文件夹, 如果存在CMakeLists.txt则添加至子目录的构建目录
@@ -44,19 +55,7 @@ function(add_clang_tidy_pre_build target_name)
         return()
     endif()
 
-    # 查找clang-tidy可执行文件
-    find_program(CLANG_TIDY_EXECUTABLE clang-tidy)
-
-    if(CLANG_TIDY_EXECUTABLE)
-        if(NOT CLANG_TIDY_FIND_ONCE)
-            message(STATUS "Found clang-tidy: ${CLANG_TIDY_EXECUTABLE}")
-            set(CLANG_TIDY_FIND_ONCE TRUE CACHE INTERNAL "Flag to ensure the message runs only once.")
-        endif()
-    else()
-        if(NOT CLANG_TIDY_FIND_ONCE)
-        message(WARNING "clang-tidy not found, use: `choco install llvm` or `sudo apt install llvm` to install clang-tidy")
-            set(CLANG_TIDY_FIND_ONCE TRUE CACHE INTERNAL "Flag to ensure the message runs only once.")
-        endif()
+    if(NOT CLANG_TIDY_EXECUTABLE)
         return()
     endif()
 
