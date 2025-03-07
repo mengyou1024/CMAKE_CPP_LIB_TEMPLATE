@@ -22,17 +22,17 @@
             }
         },
         {
-            "name": "gcc-x64-debug",
-            "displayName": "Linux GCC x64 Debug",
+            "name": "gcc-x64-static-debug",
+            "displayName": "Linux GCC x64 Static Debug",
             "inherits": "linux-gcc-base",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Debug"
             }
         },
         {
-            "name": "gcc-x64-release",
+            "name": "gcc-x64-static-release",
             "displayName": "Linux GCC x64 Release",
-            "inherits": "gcc-x64-debug",
+            "inherits": "gcc-x64-static-debug",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Release"
             }

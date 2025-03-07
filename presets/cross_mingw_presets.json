@@ -1,0 +1,57 @@
+{
+    "version": 4,
+    "configurePresets": [
+        {
+            "name": "mingw-x64-base(cross)",
+            "hidden": true,
+            "generator": "Unix Makefiles",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "installDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "x86_64-w64-mingw32-gcc",
+                "CMAKE_CXX_COMPILER": "x86_64-w64-mingw32-g++",
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+                "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
+            },
+            "condition": {
+                "type": "equals",
+                "lhs": "${hostSystemName}",
+                "rhs": "Linux"
+            }
+        },
+        {
+            "name": "mingw-x64-static-debug(cross)",
+            "displayName": "MinGW x64 Static Debug",
+            "inherits": "mingw-x64-base(cross)",
+            "cacheVariables": {
+                "VCPKG_TARGET_TRIPLET": "x64-mingw-static",
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+        },
+        {
+            "name": "mingw-x64-static-release(cross)",
+            "displayName": "MinGW x64 Static Release",
+            "inherits": "mingw-x64-static-debug(cross)",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release"
+            }
+        },
+        {
+            "name": "mingw-x64-dynamic-debug(cross)",
+            "displayName": "MinGW x64 Dynamic Debug",
+            "inherits": "mingw-x64-base(cross)",
+            "cacheVariables": {
+                "VCPKG_TARGET_TRIPLET": "x64-mingw-dynamic",
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+        },
+        {
+            "name": "mingw-x64-release(cross)",
+            "displayName": "MinGW x64 Dynamic Release",
+            "inherits": "mingw-x64-dynamic-debug(cross)",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release"
+            }
+        }
+    ]
+}

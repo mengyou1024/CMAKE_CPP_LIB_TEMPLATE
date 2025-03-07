@@ -22,8 +22,8 @@
             }
         },
         {
-            "name": "mingw-x64-debug",
-            "displayName": "MinGW x64 Debug",
+            "name": "mingw-x64-dynamic-debug",
+            "displayName": "MinGW x64 Dynamic Debug",
             "inherits": "windows-mingw-base",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Debug"
@@ -31,8 +31,8 @@
         },
         {
             "name": "mingw-x64-release",
-            "displayName": "MinGW x64 Release",
-            "inherits": "mingw-x64-debug",
+            "displayName": "MinGW x64 Dynamic Release",
+            "inherits": "mingw-x64-dynamic-debug",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Release"
             }
@@ -40,7 +40,7 @@
         {
             "name": "mingw-x64-static-debug",
             "displayName": "MinGW x64 Static Debug",
-            "inherits": "mingw-x64-debug",
+            "inherits": "mingw-x64-dynamic-debug",
             "cacheVariables": {
                 "VCPKG_TARGET_TRIPLET": "x64-mingw-static"
             }
