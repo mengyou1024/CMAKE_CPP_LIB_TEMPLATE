@@ -7,20 +7,28 @@ on:
     branches: [main, master]
 
 jobs:
-  test:
+  test_windows:
+    strategy:
+      matrix:
+        presets:
+          [
+            msvc-x64-md-debug,
+            msvc-x86-md-debug,
+            msvc-x64-mt-debug,
+            msvc-x86-mt-debug,
+          ]
     runs-on: windows-latest
     steps:
-    # 拉取仓库
-    - uses: actions/checkout@v4
-    # 配置MSVC环境
-    - uses: ilammy/msvc-dev-cmd@v1
-      with:
-        arch: x64
-    # 编译运行测试
-    - name: Build and Test
-      run: |
-        cmake --preset msvc-x64-debug
-        cmake --build build/msvc-x64-debug
-        cd build/msvc-x64-debug
-        ctest -C Debug -VV
-        
+      # 拉取仓库
+      - uses: actions/checkout@v4
+      # 配置MSVC环境
+      - uses: ilammy/msvc-dev-cmd@v1
+        with:
+          arch: x64
+      # 编译运行测试
+      - name: Build and Test
+        run: |
+          cmake --preset ${{ matrix.presets  }}
+          cmake --build build/${{ matrix.presets  }}
+          cd build/${{ matrix.presets  }}
+          ctest -C Debug -VV
