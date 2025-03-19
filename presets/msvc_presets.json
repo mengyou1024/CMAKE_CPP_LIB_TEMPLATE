@@ -136,7 +136,7 @@
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "MinSizeRel",
                 "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreadedDLL"
-           }
+            }
         },
         {
             "name": "msvc-x86-mt-dbg",
@@ -234,7 +234,7 @@
             "inherits": "msvc-x64-static-mt-dbg",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "RelWithDebInfo",
-                "CMAKE_MSVC_RUNTIME_LIBRARY":"MultiThreadedDLL"
+                "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreadedDLL"
             }
         },
         {
@@ -306,7 +306,7 @@
             "inherits": "msvc-x86-static-mt-dbg",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "RelWithDebInfo",
-                "CMAKE_MSVC_RUNTIME_LIBRARY":"MultiThreadedDLL"
+                "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreadedDLL"
             }
         },
         {

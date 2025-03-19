@@ -30,7 +30,7 @@
             }
         },
         {
-            "name": "mingw-x64-rel",
+            "name": "mingw-x64-dynamic-rel",
             "displayName": "MinGW x64 Dynamic Release",
             "inherits": "mingw-x64-dynamic-dbg",
             "cacheVariables": {
@@ -38,7 +38,7 @@
             }
         },
         {
-            "name": "mingw-x64-relwithdbginfo",
+            "name": "mingw-x64-dynamic-relwithdbginfo",
             "displayName": "MinGW x64 Dynamic Release With Debug Info",
             "inherits": "mingw-x64-dynamic-dbg",
             "cacheVariables": {
@@ -46,7 +46,7 @@
             }
         },
         {
-            "name": "mingw-x64-minsizerel",
+            "name": "mingw-x64-dynamic-minsizerel",
             "displayName": "MinGW x64 Dynamic Minimal Size Release",
             "inherits": "mingw-x64-dynamic-dbg",
             "cacheVariables": {

@@ -37,17 +37,17 @@
             }
         },
         {
-            "name": "mingw-x64-relwithdbginfo(cross)",
-            "displayName": "MinGW x64 Dynamic Release With Debug Info",
-            "inherits": "mingw-x64-dynamic-dbg(cross)",
+            "name": "mingw-x64-static-relwithdbginfo(cross)",
+            "displayName": "MinGW x64 Static Release With Debug Info",
+            "inherits": "mingw-x64-static-dbg(cross)",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "RelWithDebInfo"
             }
         },
         {
-            "name": "mingw-x64-minsizerel(cross)",
-            "displayName": "MinGW x64 Dynamic Min",
-            "inherits": "mingw-x64-dynamic-dbg(cross)",
+            "name": "mingw-x64-static-minsizerel(cross)",
+            "displayName": "MinGW x64 static Minimal Size Release",
+            "inherits": "mingw-x64-static-dbg(cross)",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "MinSizeRel"
             }
@@ -78,7 +78,7 @@
             }
         },
         {
-            "name": "mingw-x64-minsizerel(cross)",
+            "name": "mingw-x64-dynamic-minsizerel(cross)",
             "displayName": "MinGW x64 Dynamic Min",
             "inherits": "mingw-x64-dynamic-dbg(cross)",
             "cacheVariables": {
