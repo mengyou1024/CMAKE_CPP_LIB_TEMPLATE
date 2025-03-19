@@ -22,7 +22,7 @@
             }
         },
         {
-            "name": "mingw-x64-dynamic-debug",
+            "name": "mingw-x64-dynamic-dbg",
             "displayName": "MinGW x64 Dynamic Debug",
             "inherits": "windows-mingw-base",
             "cacheVariables": {
@@ -30,27 +30,59 @@
             }
         },
         {
-            "name": "mingw-x64-release",
+            "name": "mingw-x64-rel",
             "displayName": "MinGW x64 Dynamic Release",
-            "inherits": "mingw-x64-dynamic-debug",
+            "inherits": "mingw-x64-dynamic-dbg",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Release"
             }
         },
         {
-            "name": "mingw-x64-static-debug",
+            "name": "mingw-x64-relwithdbginfo",
+            "displayName": "MinGW x64 Dynamic Release With Debug Info",
+            "inherits": "mingw-x64-dynamic-dbg",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "RelWithDebInfo"
+            }
+        },
+        {
+            "name": "mingw-x64-minsizerel",
+            "displayName": "MinGW x64 Dynamic Minimal Size Release",
+            "inherits": "mingw-x64-dynamic-dbg",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "MinSizeRel"
+            }
+        },
+        {
+            "name": "mingw-x64-static-dbg",
             "displayName": "MinGW x64 Static Debug",
-            "inherits": "mingw-x64-dynamic-debug",
+            "inherits": "mingw-x64-dynamic-dbg",
             "cacheVariables": {
                 "VCPKG_TARGET_TRIPLET": "x64-mingw-static"
             }
         },
         {
-            "name": "mingw-x64-static-release",
+            "name": "mingw-x64-static-rel",
             "displayName": "MinGW x64 Static Release",
-            "inherits": "mingw-x64-static-debug",
+            "inherits": "mingw-x64-static-dbg",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Release"
+            }
+        },
+        {
+            "name": "mingw-x64-static-relwithdbginfo",
+            "displayName": "MinGW x64 Static Release With Debug Info",
+            "inherits": "mingw-x64-static-dbg",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "RelWithDebInfo"
+            }
+        },
+        {
+            "name": "mingw-x64-static-minsizerel",
+            "displayName": "MinGW x64 Static Minimal Size Release",
+            "inherits": "mingw-x64-static-dbg",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "MinSizeRel"
             }
         }
     ]

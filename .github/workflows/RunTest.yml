@@ -12,10 +12,10 @@ jobs:
       matrix:
         presets:
           [
-            msvc-x64-md-debug,
-            msvc-x86-md-debug,
-            msvc-x64-mt-debug,
-            msvc-x86-mt-debug,
+            msvc-x64-md-dbg,
+            msvc-x86-md-dbg,
+            msvc-x64-mt-dbg,
+            msvc-x86-mt-dbg,
           ]
     runs-on: windows-latest
     steps:

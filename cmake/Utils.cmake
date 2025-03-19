@@ -57,10 +57,6 @@ endfunction(add_subdirectory_path path)
     `target_name`: 目标名称
 ]]
 function(add_clang_tidy_pre_build target_name)
-    if(CMAKE_BUILD_TYPE STREQUAL "Release")
-        return()
-    endif()
-
     if(NOT CLANG_TIDY_EXECUTABLE)
         return()
     endif()

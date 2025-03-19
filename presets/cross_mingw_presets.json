@@ -20,7 +20,7 @@
             }
         },
         {
-            "name": "mingw-x64-static-debug(cross)",
+            "name": "mingw-x64-static-dbg(cross)",
             "displayName": "MinGW x64 Static Debug",
             "inherits": "mingw-x64-base(cross)",
             "cacheVariables": {
@@ -29,15 +29,31 @@
             }
         },
         {
-            "name": "mingw-x64-static-release(cross)",
+            "name": "mingw-x64-static-rel(cross)",
             "displayName": "MinGW x64 Static Release",
-            "inherits": "mingw-x64-static-debug(cross)",
+            "inherits": "mingw-x64-static-dbg(cross)",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Release"
             }
         },
         {
-            "name": "mingw-x64-dynamic-debug(cross)",
+            "name": "mingw-x64-relwithdbginfo(cross)",
+            "displayName": "MinGW x64 Dynamic Release With Debug Info",
+            "inherits": "mingw-x64-dynamic-dbg(cross)",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "RelWithDebInfo"
+            }
+        },
+        {
+            "name": "mingw-x64-minsizerel(cross)",
+            "displayName": "MinGW x64 Dynamic Min",
+            "inherits": "mingw-x64-dynamic-dbg(cross)",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "MinSizeRel"
+            }
+        },
+        {
+            "name": "mingw-x64-dynamic-dbg(cross)",
             "displayName": "MinGW x64 Dynamic Debug",
             "inherits": "mingw-x64-base(cross)",
             "cacheVariables": {
@@ -46,11 +62,27 @@
             }
         },
         {
-            "name": "mingw-x64-release(cross)",
+            "name": "mingw-x64-dynamic-rel(cross)",
             "displayName": "MinGW x64 Dynamic Release",
-            "inherits": "mingw-x64-dynamic-debug(cross)",
+            "inherits": "mingw-x64-dynamic-dbg(cross)",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Release"
+            }
+        },
+        {
+            "name": "mingw-x64-dynamic-relwithdbginfo(cross)",
+            "displayName": "MinGW x64 Dynamic Release With Debug Info",
+            "inherits": "mingw-x64-dynamic-dbg(cross)",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "RelWithDebInfo"
+            }
+        },
+        {
+            "name": "mingw-x64-minsizerel(cross)",
+            "displayName": "MinGW x64 Dynamic Min",
+            "inherits": "mingw-x64-dynamic-dbg(cross)",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "MinSizeRel"
             }
         }
     ]
