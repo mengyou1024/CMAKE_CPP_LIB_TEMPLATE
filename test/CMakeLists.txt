@@ -4,6 +4,7 @@ FetchContent_Declare(gtest
     QUIET
     URL https://codeload.github.com/google/googletest/tar.gz/refs/tags/v1.14.0
     DOWNLOAD_EXTRACT_TIMESTAMP TRUE
+    EXCLUDE_FROM_ALL
 )
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 set(BUILD_GMOCK OFF CACHE BOOL "" FORCE)
